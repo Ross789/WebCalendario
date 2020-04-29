@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>
-			Septiembre2020	
+			Septiembre2020
 		</title>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="./lib/jquery-1.10.1.min.js"></script>
@@ -50,7 +50,7 @@
 	<table width="100%">
 	<tbody><tr>
 	<td id="aniotitulo">
-		<h2>Septiembre</h2><h1>2014</h1></td>
+		<h2>Septiembre</h2><h1>2020</h1></td>
 		<td id="botones">
 			<a href="http://webcalendario.com/"><button> &lt;&lt; </button></a>
 			<a href="./webcalendario_files/webcalendario.html"><button> &gt;&gt; </button></a>
