@@ -12,7 +12,7 @@
 		<script src="./lib/jquery-ui.js"></script>
 		<script src="./js/codigo.js"></script>
 		
-		<!--  cargar los achivos css -->
+		<!--  cargar los achivos css para la pagina-->
 		<link rel="stylesheet" type="text/css" href="./css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="./css/header.css">
 	</head>
