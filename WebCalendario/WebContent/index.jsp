@@ -68,51 +68,13 @@
 		</tbody></table>
 		<div style="clear:both;"></div>
 		<div id="calendario">
-			<div class="dia ui-droppable" dia="1" style="position:relative;"><div class="numerodia"><b>1</b></div></div>
-			<div class="dia ui-droppable" dia="2" style="position:relative;"><div class="numerodia"><b>2</b></div></div>
-			<div class="dia ui-droppable" dia="3" style="position:relative;"><div class="numerodia"><b>3</b></div></div>
-			<div class="dia ui-droppable" dia="4" style="position:relative;"><div class="numerodia"><b>4</b></div></div>
-			<div class="dia ui-droppable" dia="5" style="position:relative;"><div class="numerodia"><b>5</b></div></div>
-			<div class="dia ui-droppable" dia="6" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>6</b></div></div>
-			<div class="dia ui-droppable" dia="7" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>7</b></div></div>
-			<div style="clear:both;"></div>
-			<div class="dia ui-droppable" dia="8" style="position:relative;"><div class="numerodia"><b>8</b></div></div>
-			<div class="dia ui-droppable" dia="9" style="background:white !important;position:relative;"><div class="numerodia"><b>9</b></div></div>
-			<div class="dia ui-droppable" dia="10" style="position:relative;"><div class="numerodia"><b>10</b></div></div>
-			<div class="dia ui-droppable" dia="11" style="position:relative;"><div class="numerodia"><b>11</b></div></div>
-			<div class="dia ui-droppable" dia="12" style="position:relative;"><div class="numerodia"><b>12</b></div></div>
-			<div class="dia ui-droppable" dia="13" style="background:rgba(0,0,0,0.2);position:relative;">
-				<div class="numerodia"><b>13</b></div>
-				<div idcaldia="7" anio="2014" mes="9" dia="13" hora="9" nombre="IMF" class="evento ui-draggable" style="background:#d7d7d7;width:90%;height:19.2%;position:absolute;top:48%;">
-					9:0-15:00
-						<span class="motivoevento">
-							-Evento 1
-						</span>
-						<div class="eliminar">
-							<a style="color:#d7d7d7;" href="http://webcalendario.com/php/calendario.php?operacion=eliminar&anio=2014&mes=9&dia=13&nombre=IMF">
-								X
-							</a>
-						</div>
-					</div>
-				</div>
-			<div class="dia ui-droppable" dia="14" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>14</b></div></div>
-			<div style="clear:both;"></div><div class="dia ui-droppable" dia="15" style="position:relative;"><div class="numerodia"><b>15</b></div></div>
-			<div class="dia ui-droppable" dia="16" style="position:relative;"><div class="numerodia"><b>16</b></div></div>
-			<div class="dia ui-droppable" dia="17" style="position:relative;"><div class="numerodia"><b>17</b></div></div>
-			<div class="dia ui-droppable" dia="18" style="position:relative;"><div class="numerodia"><b>18</b></div></div>
-			<div class="dia ui-droppable" dia="19" style="position:relative;"><div class="numerodia"><b>19</b></div></div>
-			<div class="dia ui-droppable" dia="20" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>20</b></div></div>
-			<div class="dia ui-droppable" dia="21" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>21</b></div></div>
-			<div style="clear:both;"></div><div class="dia ui-droppable" dia="22" style="position:relative;"><div class="numerodia"><b>22</b></div></div>
-			<div class="dia ui-droppable" dia="23" style="position:relative;"><div class="numerodia"><b>23</b></div></div>
-			<div class="dia ui-droppable" dia="24" style="position:relative;"><div class="numerodia"><b>24</b></div></div>
-			<div class="dia ui-droppable" dia="25" style="position:relative;"><div class="numerodia"><b>25</b></div></div>
-			<div class="dia ui-droppable" dia="26" style="position:relative;"><div class="numerodia"><b>26</b></div></div>
-			<div class="dia ui-droppable" dia="27" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>27</b></div></div>
-			<div class="dia ui-droppable" dia="28" style="background:rgba(0,0,0,0.2);position:relative;"><div class="numerodia"><b>28</b></div></div>
-			<div style="clear:both;"></div><div class="dia ui-droppable" dia="29" style="position:relative;"><div class="numerodia"><b>29</b></div></div>
-			<div class="dia ui-droppable" dia="30" style="position:relative;"><div class="numerodia"><b>30</b></div></div>
-			<div class="dia ui-droppable" dia="31" style="position:relative;"><div class="numerodia"><b>31</b></div></div>
+		<%
+			for(int dia =1; dia<=31; dia++){
+				out.println("<div class='dia ui-droppable' dia='"+dia+"' style='position:relative;''><div class='numerodia'><b>"+dia+"</b></div> " 
+				+"<div idcaldia='7' anio='2020' mes='9' dia='13' hora='9' nombre='IMF' class='evento ui-draggable' style='background:#d7d7d7;width:90%;height:19.2%;position:absolute;top:48%;'>9:0-15:00<span class = 'motivoevento'>-Evento 1</span><div class='eliminar'><a style = 'color: #d7d7d7;' href = 'http://webcalendario.com/'>X</a></div></div></div>"
+				+"</div>");
+			}
+		%>
 			</div>
 			<div id="nuevoevento" style="display: none;">
 				<div id="contieneform">
@@ -159,12 +121,22 @@
 								Hora de inicio:
 							</td>
 							<td>
-								<select name="hora">
-						<option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>						</select>:
-						
+						<select name="hora">
+						<% 
+							for(int hora = 0; hora<=24; hora++){
+								out.println("<option value='"+ hora+"'>"+hora+"</option>"); 
+							}
+						%>
+						</select>
 						<select name="minuto">
-						<option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option>						</select>
-							</td>
+						<% 
+							for(int minuto = 0; minuto<=60; minuto+=5){
+								out.println("<option value='"+ minuto+"'>"+minuto+"</option>"); 
+							}
+						%>
+						</select>
+						
+						</td>
 						</tr>
 						<tr>
 							<td>
