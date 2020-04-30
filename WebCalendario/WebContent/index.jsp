@@ -74,7 +74,7 @@
 				+"<div idcaldia='7' anio='2020' mes='9' dia='13' hora='9' nombre='IMF' class='evento ui-draggable' style='background:#d7d7d7;width:90%;height:19.2%;position:absolute;top:48%;'>9:0-15:00<span class = 'motivoevento'>-Evento 1</span><div class='eliminar'><a style = 'color: #d7d7d7;' href = 'http://webcalendario.com/'>X</a></div></div></div>"
 				+"</div>");
 			}
-		%>
+		%> 
 			</div>
 			<div id="nuevoevento" style="display: none;">
 				<div id="contieneform">
