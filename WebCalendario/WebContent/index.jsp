@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.*" %>
+<%@ page import = "java.io.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -57,9 +59,30 @@
 		</td>
 		<td>
 			<div id="calendarios">
+			<%
+				try{
+					String conexion  = "jdbc:mysql://127.0.0.1:3306/webcalendario"; 
+					Connection connection = null; 
+					Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+					connection = DriverManager.getConnection(conexion,"web","calendario");
+					
+					Statement  stmt = connection.createStatement();
+					ResultSet rset; 
+					String peticion = "SELECT * FROM calendarios"; 
+					rset = stmt.executeQuery(peticion);
+					
+					//mostrar en la pantalla mientras tengas datos qte mostrar. 
+					while(rset.next()){
+						out.println("<span class='calendariocol' idcalendario='1' style='width:80px;background:#3AD865; '>"+ rset.getString("nombre")+"</span> ");
+					}
+					stmt.close(); 
+					connection.close();  
+					
+				}catch(Exception ex){
+					out.println("Ha ocurrido el siguiente error" + ex.getMessage().toString()); 
+				}
 			
-				<span class="calendariocol" idcalendario="1" style="width:80px;background:#9fb6ff;">Calendario1</span>
-				<span class="calendariocol" idcalendario="1" style="width:80px;background:#9fb6ff;">Calendario2</span>
+			%>
 			
 			</div>
 			<span class="calendariocol" style="background:grey;" id="ocultacalendarios"> &gt; </span>
