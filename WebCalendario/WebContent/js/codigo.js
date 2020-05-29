@@ -10,12 +10,16 @@ $(".calendariocol").click(togglecalendarios)
 	$("#anonimo2").click(function(){$(".motivoevento").text("");})
 	$("#nuevoevento").hide()
 	$(".dia").click(muestra)
+	$("#btnanadircalendario").click(muestracalendario)
+	$("#cerrarnuevocalendario").click(cierracalendario)
 	//$(".eliminar").hide();
 	//$(".dia").hover(muestraeliminar)
 	$(".evento").draggable();
 	$( ".dia" ).droppable({
-	      drop: function( event, ui ) {
-	        $("#ajax").load("cambia.jsp?anio="+ui.draggable.attr("anio")+"&mes="+ui.draggable.attr("mes")+"&dia="+ui.draggable.attr("dia")+"&hora="+ui.draggable.attr("hora")+"&nuevodia="+$(this).attr("dia"))
+	      drop: function( event, ui ) {//funcion para poder cambiar eventos de un dia a otro dentro del calendario
+	        $("#ajax").load("acciones/cambia.jsp?idevento="+ui.draggable.attr("idevento")+"&nuevodia="+$(this).attr("dia"));
+	        console.log("El evento que vas a mover es: " + ui.draggable.attr("idevento")); 
+	        console.log("El dia al que lo vas a mover es: " + $(this).attr("dia"));
 	      	setTimeout(function(){window.location="?"},1000);
 	      }
 	    });
@@ -49,10 +53,27 @@ function muestra(){
 	$("#dimedia").val(numdia);
 	$("#nuevoevento").append('<input type="hidden" name="dia" value="'+dia+'">')
 }
+
+function muestracalendario(){
+	$("#calendario").addClass("difuminado")
+	$("#nuevocalendarioform").fadeIn()
+	/*
+	var dia = $(this).attr("id")
+	var numdia = $(this).attr("dia")
+	$("#dimedia").val(numdia);
+	$("#nuevoevento").append('<input type="hidden" name="dia" value="'+dia+'">')
+	*/
+}
+
 function cierra(){
 	$("#calendario").removeClass("difuminado")
 	$("#nuevoevento").fadeOut()
 }
+function cierracalendario(){
+	$("#calendario").removeClass("difuminado")
+	$("#nuevocalendarioform").fadeOut()
+}
+
 function muestraeliminar(){
 	
 }

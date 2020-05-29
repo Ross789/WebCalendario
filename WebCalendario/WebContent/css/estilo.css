@@ -148,3 +148,14 @@ h2{font-size:12px;}
   #aniotitulo{display:none;}
   }
   nav ul li a{color:inherit;text-decoration:none;}
+  
+  .cierracalendarioX{
+  color:white; 
+  background:black; 
+  width:20px;
+  height:15px;  
+  text-decoration:none; 
+  border-radius:20px; 
+  padding:4px; 
+  opacity:0.4; 
+  }
